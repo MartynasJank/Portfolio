@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Martynas Jankauskas — full-stack developer based in Vilnius, Lithuania.">
+  <meta property="og:title" content="Martynas Jankauskas — Full-Stack Developer">
+  <meta property="og:description" content="Making pixels do what they're told.">
+  <meta property="og:type" content="website">
+  <title>Martynas Jankauskas</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="cursor-ring"></div>
+  <div id="cursor-dot"></div>
+  <canvas id="easter-canvas"></canvas>
+
+  <nav id="nav">
+    <span class="nav-logo">MJ</span>
+    <ul class="nav-links">
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#terminal">terminal</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hey, I'm</p>
+        <h1 class="hero-name glitch" data-text="Martynas">Martynas</h1>
+        <p class="hero-role">Full-Stack Developer</p>
+        <p class="hero-tagline">
+          <span id="typewriter-target"></span><span class="cursor-blink" id="type-cursor">|</span>
+          <noscript>I build things that work.</noscript>
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+          <a href="https://github.com/MartynasJank" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-code" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <span class="tdot tdot-red"></span>
+            <span class="tdot tdot-yellow"></span>
+            <span class="tdot tdot-green"></span>
+            <span class="code-filename">Developer.php</span>
+          </div>
+<pre class="code-body"><code><span class="ck">&lt;?php</span>
+
+<span class="ck">class</span> <span class="cc">Developer</span>
+{
+    <span class="ck">public</span> <span class="ct">string</span> <span class="cv">$name</span>     <span class="cp">=</span> <span class="cs">'Martynas'</span>;
+    <span class="ck">public</span> <span class="ct">string</span> <span class="cv">$location</span> <span class="cp">=</span> <span class="cs">'Vilnius, LT'</span>;
+    <span class="ck">public</span> <span class="ct">array</span>  <span class="cv">$stack</span>    <span class="cp">=</span> [
+        <span class="cs">'backend'</span>  <span class="cp">=></span> [<span class="cs">'PHP'</span><span class="cp">,</span> <span class="cs">'Laravel'</span><span class="cp">,</span> <span class="cs">'Node.js'</span>]<span class="cp">,</span>
+        <span class="cs">'data'</span>     <span class="cp">=></span> [<span class="cs">'MySQL'</span><span class="cp">,</span> <span class="cs">'MongoDB'</span><span class="cp">,</span> <span class="cs">'Redis'</span>]<span class="cp">,</span>
+        <span class="cs">'infra'</span>    <span class="cp">=></span> [<span class="cs">'Docker'</span><span class="cp">,</span> <span class="cs">'Linux'</span><span class="cp">,</span> <span class="cs">'CI/CD'</span>]<span class="cp">,</span>
+        <span class="cs">'frontend'</span> <span class="cp">=></span> [<span class="cs">'JS'</span><span class="cp">,</span> <span class="cs">'HTML'</span><span class="cp">,</span> <span class="cs">'CSS'</span>]<span class="cp">,</span>
+    ];
+
+    <span class="ck">public function</span> <span class="cf">ships</span>()<span class="ct">: bool</span>
+    {
+        <span class="ck">return</span> <span class="cb">true</span><span class="cp">;</span> <span class="cmt">// always</span>
+    }
+}</code></pre>
+        </div>
+      </div>
+    </div>
+    <div id="hero-sentinel"></div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">projects/</h2>
+      <div class="project-grid">
+
+        <article class="project-card" role="link" tabindex="0"
+                 data-url="https://moviepicker.martybuilds.dev"
+                 aria-label="Movie Picker — open live project">
+          <div class="card-scanline"></div>
+          <header class="card-header">
+            <span class="card-icon">▶</span>
+            <h3 class="card-title">Movie Picker</h3>
+            <span class="card-status">live</span>
+          </header>
+          <p class="card-desc">Built when picking a movie kept taking longer than watching one. Suggests films based on mood and genre, and keeps track of what you've already seen.</p>
+          <footer class="card-footer">
+            <div class="card-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a href="https://moviepicker.martybuilds.dev" target="_blank" rel="noopener noreferrer" class="card-link" tabindex="-1">moviepicker.martybuilds.dev ↗</a>
+          </footer>
+        </article>
+
+        <article class="project-card" role="link" tabindex="0"
+                 data-url="https://tiktokshuffle.martybuilds.dev"
+                 aria-label="TikTok Shuffle — open live project">
+          <div class="card-scanline"></div>
+          <header class="card-header">
+            <span class="card-icon">▶</span>
+            <h3 class="card-title">TikTok Shuffle</h3>
+            <span class="card-status">live</span>
+          </header>
+          <p class="card-desc">Built because the algorithm was getting too good at keeping me on there. Randomises the feed so you see content from people you follow, not what TikTok decides you should.</p>
+          <footer class="card-footer">
+            <div class="card-tags">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Vite</span>
+            </div>
+            <a href="https://tiktokshuffle.martybuilds.dev" target="_blank" rel="noopener noreferrer" class="card-link" tabindex="-1">tiktokshuffle.martybuilds.dev ↗</a>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">about/</h2>
+      <div class="about-content">
+        <p class="about-text">
+          Six years building web apps — SaaS platforms, REST APIs, internal tools.
+          PHP and Laravel are my main tools, but I reach for Node.js or Python when it makes sense.
+          Based in Vilnius. When something bothers me enough, I build a fix for it.
+        </p>
+        <div class="about-meta">
+          <span class="location-tag">
+            <span class="location-dot"></span>
+            Vilnius, Lithuania
+          </span>
+          <span class="status-badge">
+            <span class="status-dot"></span>
+            Open to new roles
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="terminal" class="reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">terminal/</h2>
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <span class="tdot tdot-red"></span>
+          <span class="tdot tdot-yellow"></span>
+          <span class="tdot tdot-green"></span>
+          <span class="terminal-title">marty@martybuilds.dev ~ </span>
+        </div>
+        <div class="terminal-body" id="terminal-body"></div>
+        <div class="terminal-input-row">
+          <span class="prompt">$&nbsp;</span>
+          <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command..." disabled aria-label="Terminal input">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://github.com/MartynasJank" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="footer-sep">/</span>
+        <a href="mailto:martynasjank@gmail.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Martynas Jankauskas · martybuilds.dev</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
