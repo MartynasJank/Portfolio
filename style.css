@@ -621,6 +621,124 @@ body.cursor-hover #cursor-ring {
   animation: pulse-green 2.2s ease-in-out infinite 0.6s;
 }
 
+/* ── Experience timeline ───────────────────────────────────── */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.25rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--bg-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -4px;
+  top: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  animation: pulse-orange 2.2s ease-in-out infinite;
+}
+
+.timeline-marker--past {
+  background: var(--bg-border);
+  animation: none;
+}
+
+.timeline-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.25s;
+}
+
+.timeline-content:hover {
+  border-color: rgba(255, 137, 6, 0.35);
+}
+
+.job-header {
+  margin-bottom: 0.85rem;
+}
+
+.job-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.job-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.job-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.job-company {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.job-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.job-highlights {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.job-highlights li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.55;
+}
+
+.job-highlights li::before {
+  content: '→';
+  color: var(--accent);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-top: 0.05em;
+}
+
 /* ── Terminal ──────────────────────────────────────────────── */
 .terminal-window {
   background: var(--bg-surface);
